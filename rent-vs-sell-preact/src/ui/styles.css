@@ -1,0 +1,57 @@
+:root {
+  --bg: #0b1020;
+  --card: #11162a;
+  --muted: #9aa3b2;
+  --text: #e6ebf2;
+  --accent: #6ee7b7;
+  --accent2: #60a5fa;
+  --danger: #f87171;
+  --radius: 18px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.35;
+}
+header {
+  padding: 28px 22px 10px; text-align: center;
+}
+header h1 { margin: 0 0 8px; font-weight: 700; letter-spacing: 0.2px; }
+header p { margin: 0; color: var(--muted); }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.grid { display: grid; grid-template-columns: 360px 1fr; gap: 20px; }
+
+.card { background: var(--card); border-radius: var(--radius); padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+.card h2 { margin: 0 0 14px; font-size: 18px; letter-spacing: 0.2px; }
+.section { margin-bottom: 18px; }
+.section h3 { margin: 0 0 8px; font-size: 14px; color: var(--muted); font-weight: 600; }
+
+label { display: block; font-size: 12px; color: var(--muted); margin: 10px 0 6px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+input[type="number"], select {
+  width: 100%; padding: 10px 12px; border-radius: 12px; border: 1px solid #1e2440;
+  background: #0d1326; color: var(--text); outline: none; transition: border .15s ease;
+}
+input[type="number"]:focus, select:focus { border-color: #2b386b; }
+
+.hint { font-size: 11px; color: var(--muted); margin-top: 4px; }
+.controls { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+button {
+  background: #1a2448; color: var(--text); border: 1px solid #263366; padding: 10px 14px; border-radius: 12px; cursor: pointer;
+  font-weight: 600; transition: transform .08s ease, background .15s ease, border .15s ease;
+}
+button:hover { background: #213066; }
+button:active { transform: translateY(1px); }
+
+.pill { padding: 6px 10px; border-radius: 999px; font-size: 11px; color: #0b1020; background: var(--accent); font-weight: 700; }
+
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { padding: 8px 10px; border-bottom: 1px dashed #243054; text-align: right; }
+th { color: var(--muted); font-weight: 600; }
+td.label, th.label { text-align: left; }
+.delta-pos { color: var(--accent); font-weight: 700; }
+.delta-neg { color: var(--danger); font-weight: 700; }
+
+footer { text-align: center; color: var(--muted); padding: 20px; font-size: 12px; }
+.small { font-size: 11px; color: var(--muted); }
